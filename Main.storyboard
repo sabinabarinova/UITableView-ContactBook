@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="JoU-o7-fnb">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="acs-C0-VGC">
+            <objects>
+                <navigationController id="JoU-o7-fnb" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="nCS-vA-fIq">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="KdQ-Ym-h4l"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8eY-QY-1ax" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1081" y="47"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Contacts" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="32S-hM-OCq">
+                                <rect key="frame" x="20" y="63" width="374" height="770"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="top" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="Y9t-Mc-3EV">
+                                        <rect key="frame" x="0.0" y="0.0" width="205" height="92"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AE3-gc-l8q">
+                                                <rect key="frame" x="0.0" y="0.0" width="205" height="61"/>
+                                                <attributedString key="attributedText">
+                                                    <fragment content="Contacts">
+                                                        <attributes>
+                                                            <font key="NSFont" size="50" name="AppleGothic"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                </attributedString>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" estimatedSectionHeaderHeight="-1" sectionFooterHeight="28" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="szb-yl-Yuf">
+                                        <rect key="frame" x="0.0" y="92" width="374" height="678"/>
+                                    </tableView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="szb-yl-Yuf" secondAttribute="trailing" id="Ita-YB-SyK"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="32S-hM-OCq" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ICx-WB-eMy"/>
+                            <constraint firstItem="32S-hM-OCq" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="-25" id="KCG-E0-8op"/>
+                            <constraint firstItem="32S-hM-OCq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ni9-bq-sHH"/>
+                            <constraint firstItem="32S-hM-OCq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Wjd-ft-1Ib"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="GjO-GN-MR9"/>
+                    <connections>
+                        <outlet property="labelName" destination="AE3-gc-l8q" id="TeJ-h2-BtS"/>
+                        <outlet property="tableView" destination="szb-yl-Yuf" id="xly-J7-8p6"/>
+                        <segue destination="Yw2-mX-w5D" kind="show" identifier="showView" id="9Xu-ee-b3o"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-178.2608695652174" y="63.616071428571423"/>
+        </scene>
+        <!--ContactInfo-->
+        <scene sceneID="lp4-5d-hh3">
+            <objects>
+                <viewController storyboardIdentifier="ContactInfo" title="ContactInfo" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Yw2-mX-w5D" customClass="ContactInfo" customModule="Contacts" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Slm-qa-WyT">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="center" axis="vertical" distribution="fillProportionally" alignment="center" spacing="57" translatesAutoresizingMaskIntoConstraints="NO" id="kR1-je-czg">
+                                <rect key="frame" x="100.5" y="341.5" width="213.5" height="213"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="center" axis="vertical" distribution="fillEqually" alignment="top" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="fRA-sm-eNa">
+                                        <rect key="frame" x="0.0" y="0.0" width="213.5" height="213"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="top" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="QRI-uo-z6r">
+                                                <rect key="frame" x="0.0" y="0.0" width="97" height="94"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AtK-3v-hWY">
+                                                        <rect key="frame" x="0.0" y="0.0" width="97" height="36.5"/>
+                                                        <attributedString key="attributedText">
+                                                            <fragment content="Name:">
+                                                                <attributes>
+                                                                    <font key="NSFont" size="30" name="AppleGothic"/>
+                                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                </attributes>
+                                                            </fragment>
+                                                        </attributedString>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zMC-Jb-tIW">
+                                                        <rect key="frame" x="0.0" y="57.5" width="72" height="36.5"/>
+                                                        <attributedString key="attributedText">
+                                                            <fragment content="Label">
+                                                                <attributes>
+                                                                    <font key="NSFont" size="30" name="AppleGothic"/>
+                                                                </attributes>
+                                                            </fragment>
+                                                        </attributedString>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Nav-Yc-a7O">
+                                                <rect key="frame" x="0.0" y="119" width="213.5" height="94"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eDV-X7-bye">
+                                                        <rect key="frame" x="0.0" y="0.0" width="213.5" height="36.5"/>
+                                                        <attributedString key="attributedText">
+                                                            <fragment content="Phone number:">
+                                                                <attributes>
+                                                                    <font key="NSFont" size="30" name="AppleGothic"/>
+                                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                </attributes>
+                                                            </fragment>
+                                                        </attributedString>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tmf-cB-n6U">
+                                                        <rect key="frame" x="0.0" y="57.5" width="72" height="36.5"/>
+                                                        <attributedString key="attributedText">
+                                                            <fragment content="Label">
+                                                                <attributes>
+                                                                    <font key="NSFont" size="30" name="AppleGothic"/>
+                                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                                                </attributes>
+                                                            </fragment>
+                                                        </attributedString>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="9QY-s3-bZO"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="kR1-je-czg" firstAttribute="centerY" secondItem="Slm-qa-WyT" secondAttribute="centerY" id="8XV-t1-2ra"/>
+                            <constraint firstItem="kR1-je-czg" firstAttribute="centerX" secondItem="Slm-qa-WyT" secondAttribute="centerX" id="Q9S-sm-ti9"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="vUF-Us-ZnZ"/>
+                    <connections>
+                        <outlet property="NameLabel" destination="zMC-Jb-tIW" id="ryu-Qt-iPb"/>
+                        <outlet property="NumberLabel" destination="tmf-cB-n6U" id="hut-XK-MtC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="J9g-bE-WNG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="562" y="-15"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
